@@ -4,7 +4,7 @@ import {TypeOrmModule} from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { FilmModule } from './film/film.module';
-import { CacheModule } from '@nestjs/cache-manager';
+import { CacheModule, CacheStore } from '@nestjs/cache-manager';
 import config from './config';
 import { redisStore } from 'cache-manager-redis-yet';
 
@@ -17,17 +17,23 @@ import { redisStore } from 'cache-manager-redis-yet';
       isGlobal: true,
     }),
     CacheModule.registerAsync(
+      
       {
         isGlobal: true,
-        useFactory: async (config) => {
+        imports: [ConfigModule],
+
+        useFactory: async (config: ConfigService) =>{
           const store = await redisStore({
-            ttl: 30 * 1000,
+            ttl: parseInt('0'),
             socket: {
               host: config.get('redis.host'),
-              port: config.get('redis.port'),
-            }
-          });
-          return {store};
+              port: +config.get('redis.port'),
+            },
+          }) as unknown as CacheStore;
+          return {
+            store: store as unknown as CacheStore,
+            ttl: 60 * 60 * 24 * 7,
+          }
         },
         inject: [ConfigService],
       }
