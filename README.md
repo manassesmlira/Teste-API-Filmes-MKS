@@ -1,73 +1,68 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![](https://i.ibb.co/54tjzHh/Sistema-Banc-rio.png)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# API-Rest Usuarios e Filmes | Teste MKS
 
-## Description
+## Descrição
+Este projeto é uma API REST feita Nestjs. Usando o banco de dados Postgres e autenticação com Jwt Token. Nela é possível cadastrar usuário, e o usuário consegue editar seus dados, cadastrar filmes, editar filmes, listar usuários e filmes, bem como deletar filmes.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Para executar este projeto você vai precisar das seguintes Linguagens e Ferramentas
 
-## Installation
+- Node.js
+- Vscode
+- Insomnia
+- Docker
+- Redis
+- TypeScript
+- Nest.js
+- TypeORM
+- Swagger
+- Redis
+- PostgreSQL
 
+## Link de Teste das Rotas
+[Link Swagger Produçao](https://web-production-8dc8.up.railway.app/api)
+
+
+## Comandos para rodar o projeto local
 ```bash
 $ npm install
 ```
-
-## Running the app
-
 ```bash
-# development
-$ npm run start
-
-# watch mode
+$ docker compose up
+```
+Em um terminal diferente execute:
+```bash 
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+Se tudo correu bem, o Swagger está disponível nesse endereço: http://localhost:3000/api#/
 
-## Test
+## Funcionalidades
 
-```bash
-# unit tests
-$ npm run test
+### Fucionalidades do Projeto
 
-# e2e tests
-$ npm run test:e2e
+- [x] Cadastrar usuário
+- [x] Fazer login
+- [x] Cadastrar filme*
+- [x] Atualizar usuário*
+- [x] Atualizar filme*
+- [x] Deletar filme*
+- [x] Listar usuários*
+- [x] Listar filme*
 
-# test coverage
-$ npm run test:cov
-```
+Obs: (*) Funcionalidades que usam de autenticação token
 
-## Support
+### Contribuidores
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<a href="https://github.com/manassesmlira">
+<img src="https://i.ibb.co/h1YRCr6/mana-150px.png" width="70px" />
+</a>
 
-## Stay in touch
+### Autor
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+<a href="https://github.com/manassesmlira">
+<img src="https://i.ibb.co/h1YRCr6/mana-150px.png" width="70px" />
+</a>
 
-## License
+[Licenca MIT License](http://creativecommons.org/licenses/by)
 
-Nest is [MIT licensed](LICENSE).
