@@ -8,8 +8,8 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
-  .setTitle('User and Films')
-  .setDescription('A Vaga e Minha!')
+  .setTitle('API-Rest Usuarios e Filmes | Teste MKS')
+  .setDescription('Este projeto é uma API REST feita Nestjs. Usando o banco de dados Postgres e autenticação com Jwt Token. Nela é possível cadastrar usuário, e o usuário consegue editar seus dados, cadastrar filmes, editar filmes, listar usuários e filmes, bem como deletar filmes.')
   .setVersion('1.0')
   
   .build();
