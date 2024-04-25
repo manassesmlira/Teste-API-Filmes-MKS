@@ -22,6 +22,7 @@ Este projeto é uma API REST feita Nestjs. Usando o banco de dados Postgres e au
 ## Link de Teste das Rotas
 [Link Swagger Produçao](https://web-production-8dc8.up.railway.app/api)
 
+Deploy realizado na plataforma Railway
 
 ## Comandos para rodar o projeto local
 ```bash
