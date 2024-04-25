@@ -1,10 +1,10 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm'
-import { Users } from './user.entity';
+import { Users } from './entities/user.entity';
 import { UsersDto } from './users.dto';
-import { UserDomain } from './user.domain';
-import { UserUpdateDomain } from './user.domain.update';
+import { UserDomain } from './domain/user.domain';
+import { UserUpdateDomain } from './domain/user.domain.update';
 
 
 

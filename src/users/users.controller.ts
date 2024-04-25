@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Post, Put, Res, UseGuards } from '@nestjs/common'; 
 import { Response } from 'express';
 import { UsersService } from './users.service';
-import { UserDomain } from './user.domain';
+import { UserDomain } from './domain/user.domain';
 import { AuthGuard } from '@nestjs/passport';
-import { UserUpdateDomain } from './user.domain.update';
+import { UserUpdateDomain } from './domain/user.domain.update';
 import { getUser } from './decorators/getUser-decorator';
 import { ApiTags } from '@nestjs/swagger';
 

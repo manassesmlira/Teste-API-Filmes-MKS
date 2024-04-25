@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { Film } from './film.entity';
+import { Film } from './entities/film.entity';
 import { Repository } from 'typeorm'
-import { FilmDomain } from './film.domain';
+import { FilmDomain } from './domain/film.domain';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Cache } from 'cache-manager';
 

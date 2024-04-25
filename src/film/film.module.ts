@@ -3,7 +3,7 @@ import { FilmService } from './film.service';
 import { FilmController } from './film.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModule } from '@nestjs/jwt';
-import { Film } from './film.entity';
+import { Film } from './entities/film.entity';
 
 @Module({
   imports: [

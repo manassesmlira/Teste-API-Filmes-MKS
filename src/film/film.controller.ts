@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Put, Res, UseGuards,
 import { FilmService } from './film.service';
 import { AuthGuard } from '@nestjs/passport';
 import { Response } from 'express';
-import { FilmDomain } from './film.domain';
+import { FilmDomain } from './domain/film.domain';
 import { ApiTags } from '@nestjs/swagger';
 import { CacheInterceptor, CacheKey, CacheTTL } from '@nestjs/cache-manager';
 
