@@ -6,7 +6,7 @@ import { FilmDomain } from './film.domain';
 import { ApiTags } from '@nestjs/swagger';
 import { CacheInterceptor } from '@nestjs/cache-manager';
 
-@UseInterceptors(CacheInterceptor)
+//@UseInterceptors(CacheInterceptor)
 
 @ApiTags("Films")
 @Controller('film')
@@ -18,10 +18,10 @@ export class FilmController {
 
     @Get()
     @UseGuards(AuthGuard(`jwt`))
-    async findAllFilms(){
-        //const films = await this.filmsService.findAllFilms();
-        //return response.status(200).json(films)
-        return this.filmsService.findAllFilms();
+    async findAllFilms(@Res() response: Response){
+        const films = await this.filmsService.findAllFilms();
+        return response.status(200).json(films)
+        //return this.filmsService.findAllFilms();
     }
 
     @Post()

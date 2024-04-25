@@ -20,16 +20,16 @@ export class FilmService {
     ) { }
 
 //alteracao cache inicia aqui
-    // async getFilms() {
-    //     const cacheData = await this.cacheManager.get('films');
-    //     if(cacheData) {
+    async getFilms() {
+        const cacheData = await this.cacheManager.get('films');
+        if(cacheData) {
             
-    //         return cacheData;            
-    //     }
-    //     const filmsData = await this.findAllFilms();
-    //     await this.cacheManager.set('films', filmsData, 60 * 10000);
-    //     return filmsData;
-    // }
+            return cacheData;            
+        }
+        const filmsData = await this.findAllFilms();
+        await this.cacheManager.set('films', filmsData, 60 * 10000);
+        return filmsData;
+    }
 
    
 
