@@ -4,7 +4,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { Response } from 'express';
 import { FilmDomain } from './film.domain';
 import { ApiTags } from '@nestjs/swagger';
-import { CacheInterceptor, CacheKey } from '@nestjs/cache-manager';
+import { CacheInterceptor, CacheKey, CacheTTL } from '@nestjs/cache-manager';
 
 @UseInterceptors(CacheInterceptor)
 
@@ -17,6 +17,7 @@ export class FilmController {
 
 
     @Get()
+    @CacheTTL(0)
     @CacheKey("Films-list")
     @UseGuards(AuthGuard(`jwt`))
     async findAllFilms(){        
