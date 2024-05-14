@@ -8,16 +8,16 @@ Este projeto é uma API REST feita Nestjs. Usando o banco de dados Postgres e au
 
 ### Para executar este projeto você vai precisar das seguintes Linguagens e Ferramentas
 
-- Node.js (Experiencia: 9 meses)
+- Node.js
 - Vscode 
 - Insomnia
-- Docker (Experiencia: 3 dias)
-- Redis (Experiencia: 3 dias)
-- TypeScript (Experiencia: 1 mes)
-- Nest.js (Experiencia: 3 dias)
-- TypeORM (Experiencia: 3 dias)
+- Docker 
+- Redis 
+- TypeScript 
+- Nest.js 
+- TypeORM 
 - Swagger 
-- PostgreSQL (Experiencia: 9 meses)
+- PostgreSQL
 
 ## Link de Teste das Rotas
 [Link Swagger Produçao](https://web-production-8dc8.up.railway.app/api)
